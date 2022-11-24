@@ -1,0 +1,236 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-size: 1.6rem;
+	font-family: 'Lato', sans-serif;
+	font-weight: lighter;
+	background-color: #dee3e4;
+	color: #121212;
+}
+
+.separator {
+	border: 0.2px solid #f4f4f499;
+	width: 80%;
+	margin: 0.75em auto;
+}
+
+h1 {
+	font-size: 4.2rem;
+	font-weight: normal;
+	text-align: center;
+}
+
+.app {
+	padding: 2em;
+	width: 800px;
+	background-color: #d1d1d1;
+	border-radius: 15px;
+	box-shadow: 0 0 25px #fff;
+}
+
+.form {
+	height: 35px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+    margin-bottom: 1em;
+	&__input {
+		width: 50%;
+		height: 100%;
+		font-size: 1.8rem;
+		padding: 0 0.6em;
+		background-color: transparent;
+		border: 1px solid #f4f4f4;
+		border-radius: 17.5px;
+		transition: border 0.3s;
+		&:focus {
+			outline: none;
+			border: 1px solid #11afcf;
+		}
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: 0.75em;
+		height: 100%;
+		aspect-ratio: 1/1;
+		font-size: 2rem;
+		border: none;
+		background-color: transparent;
+		color: #f4f4f4;
+		border-radius: 50%;
+		cursor: pointer;
+		.icon {
+			transition: font-size 0.3s, color 0.3s;
+		}
+		&:hover .icon {
+			font-size: 2.2rem;
+			color: #11afcf;
+		}
+	}
+}
+
+.currentWeatherBox {
+	display: flex;
+	flex-direction: column;
+	p {
+		margin: 0.5em 0;
+		font-size: 1.8rem;
+		text-transform: uppercase;
+	}
+	.currentWeather {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&__params {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			width: 100%;
+			list-style: none;
+			.temperature {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				.temp {
+					font-size: 6rem;
+					letter-spacing: -2px;
+				}
+				.feelTemp {
+					margin-top: -0.5em;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					span {
+						padding: 0.05em;
+						font-size: 1.4rem;
+					}
+				}
+			}
+			.image {
+				margin-left: 1em;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				img {
+					transform: scale(1.2);
+				}
+				p {
+					margin-top: -1.25em;
+					font-size: 1.4rem;
+					text-transform: lowercase;
+				}
+			}
+			.restParams {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+                &__label {
+                    font-size: 1.6rem;
+                }
+                &__value {
+                    margin-top: 0.25em;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                }
+			}
+		}
+	}
+}
+
+.forecastWeatherBox {
+	display: flex;
+	flex-direction: column;
+	&__title {
+		margin: 0.5em 0;
+		font-size: 1.8rem;
+        text-transform: uppercase;
+	}
+	.forecastWeather {
+		&__list {
+			width: 100%;
+			overflow-x: scroll;
+			display: flex;
+			list-style: none;
+			.forecastElement {
+				position: relative;
+				padding: 0.5em;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				border: 1px solid transparent;
+                border-radius: 5px;
+				transition: background-color 0.3s;
+				cursor: pointer;
+				&--active {
+					background-color: #11afcf22;
+				}
+				&__date {
+					font-size: 1.2rem;
+					font-weight: normal;
+				}
+				&__hour {
+                    margin-bottom: 0.4em;
+                    margin-top: 0.2em;
+					font-size: 1.6rem;
+					font-weight: normal;
+				}
+				&__icon {
+					margin-top: -0.4em;
+					margin-bottom: -0.5em;
+					height: 50px;
+				}
+				&__react-icon {
+					font-size: 1.8rem;
+				}
+				&:hover {
+					background-color: #11afcf44;
+				}
+			}
+		}
+		&__weather{
+            .currentWeather__params{
+                margin-top: 1em;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                list-style: none;
+                .param {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: .4em 1.5em;
+                    &__label {
+                        font-size: 1.5rem;
+                    }
+                    &__value {
+                        font-size: 1.5rem;
+                        font-weight: normal;
+                    }
+                }
+            }
+		}
+	}
+}
