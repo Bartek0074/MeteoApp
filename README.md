@@ -1,3 +1,8 @@
+
+
+![meteoApp](https://user-images.githubusercontent.com/88652468/203975721-4d20ea94-ce28-4578-abdf-7e0dd2d787a1.gif)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
