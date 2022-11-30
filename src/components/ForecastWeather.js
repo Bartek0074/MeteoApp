@@ -20,7 +20,6 @@ function ForecastWeather(props) {
 	const pressure = forecast[active].main.pressure;
 	const humidity = forecast[active].main.humidity;
 	const cloudiness = forecast[active].clouds.all;
-	console.log(forecast[active]);
 	return (
 		<div className='forecastWeatherBox'>
 			<p className='forecastWeatherBox__title'>Weather forecast</p>
