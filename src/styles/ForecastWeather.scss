@@ -3,7 +3,7 @@
 	flex-direction: column;
 	&__title {
 		margin: 0.5em 0;
-		font-size: 1.8rem;
+		font-size: 1.6rem;
         text-transform: uppercase;
 	}
 	.forecastWeather {
@@ -17,21 +17,86 @@
             &-params{
                 margin-top: 1em;
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: auto auto;
                 list-style: none;
                 .param {
                     display: flex;
                     justify-content: space-between;
-                    margin: .4em 1.5em;
+                    margin: .25em .75em;
                     &__label {
-                        font-size: 1.5rem;
+                        font-size: 1.4rem;
                     }
                     &__value {
-                        font-size: 1.5rem;
+                        font-size: 1.4rem;
                         font-weight: normal;
                     }
                 }
             }
 		}
 	}
+}
+
+@media (min-width: 576px) {
+    .forecastWeatherBox {
+        &__title {
+            font-size: 1.7rem;
+        }
+        .forecastWeather {
+            &__weather{
+                &-params{
+                    margin-top: 1em;
+                    display: grid;
+                    grid-template-columns: repeat(3, auto);
+                    list-style: none;
+                    .param {
+                        margin: .4em 1em;
+                        &__label {
+                            font-size: 1.5rem;
+                        }
+                        &__value {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .forecastWeatherBox {
+        .forecastWeather {
+            &__weather{
+                &-params{
+                    grid-template-columns: repeat(3, 1fr);
+                    .param {
+                        margin: .4em 1.25em;
+                        &__label {
+                            font-size: 1.6rem;
+                        }
+                        &__value {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .forecastWeatherBox {
+        &__title {
+            font-size: 1.8rem;
+        }
+        .forecastWeather {
+            &__weather{
+                &-params{
+                    .param {
+                        margin: .4em 1.5em;
+                    }
+                }
+            }
+        }
+    }
 }

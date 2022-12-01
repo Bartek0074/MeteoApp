@@ -14,7 +14,6 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
 	font-size: 1.6rem;
 	font-family: 'Lato', sans-serif;
 	font-weight: lighter;
@@ -23,21 +22,42 @@ body {
 }
 
 .separator {
+	margin: 0.5em auto;
+	width: 90%;
 	border: 0.2px solid #f4f4f499;
-	width: 80%;
-	margin: 0.75em auto;
 }
 
-
 .app {
+	margin: 1em 0;
+	width: 90vw;
+	max-width: 900px;
 	padding: 2em;
-	width: 800px;
 	background-color: #d1d1d1;
 	border-radius: 15px;
 	box-shadow: 0 0 25px #fff;
 	&__city-info {
-		font-size: 4.2rem;
+		font-size: 3rem;
 		font-weight: normal;
 		text-align: center;
+	}
+}
+
+@media (min-width: 576px) {
+	.separator {
+		width: 80%;
+		margin: 0.75em auto;
+	}
+	.app {
+		&__city-info {
+			font-size: 3.6rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.app {
+		&__city-info {
+			font-size: 4.2rem;
+		}
 	}
 }

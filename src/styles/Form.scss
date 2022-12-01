@@ -6,7 +6,8 @@
 	align-items: center;
     margin-bottom: 1em;
 	&__input {
-		width: 50%;
+		width: 75%;
+		max-width: 400px;
 		height: 100%;
 		font-size: 1.8rem;
 		padding: 0 0.6em;
