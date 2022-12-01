@@ -1,0 +1,73 @@
+.currentWeatherBox {
+	display: flex;
+	flex-direction: column;
+	&__title {
+		margin: 0.5em 0;
+		font-size: 1.8rem;
+		text-transform: uppercase;
+	}
+	.currentWeather {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&__params {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			width: 100%;
+			list-style: none;
+			.temperature {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				.temp {
+					font-size: 6rem;
+					letter-spacing: -2px;
+				}
+				.feelTemp {
+					margin-top: -0.5em;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					span {
+						padding: 0.05em;
+						font-size: 1.4rem;
+					}
+				}
+			}
+			.image {
+				margin-left: 1em;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				&__img {
+					transform: scale(1.2);
+				}
+				&__description {
+					margin-top: -1.25em;
+					font-size: 1.4rem;
+					text-transform: lowercase;
+				}
+			}
+			.restParams {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+                &__label {
+                    font-size: 1.6rem;
+                }
+                &__value {
+                    margin-top: 0.25em;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                }
+			}
+		}
+	}
+}

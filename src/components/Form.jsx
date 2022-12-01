@@ -1,10 +1,12 @@
+import '../styles/Form.scss'
 import React, { useState } from 'react';
 import { BsSearch } from 'react-icons/bs';
+
 function Form(props) {
 
-    const [input, setInput] = useState('');
-
 	const { formHandle } = props;
+
+    const [input, setInput] = useState('');
 
 	const onClickHandle = (e) => {
 		e.preventDefault();

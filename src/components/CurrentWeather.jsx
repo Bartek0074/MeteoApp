@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/CurrentWeather.scss'
 
 function CurrentWeather(props) {
 	const { data } = props;
@@ -12,7 +13,7 @@ function CurrentWeather(props) {
 	
 	return (
 		<div className='currentWeatherBox'>
-			<p>Current weather</p>
+			<p className='currentWeatherBox__title'>Current weather</p>
 			<div className='currentWeather'>
 				<ul className='currentWeather__params'>
 					<li className='temperature'>
@@ -25,8 +26,8 @@ function CurrentWeather(props) {
 						</div>
 					</li>
 					<li className='image'>
-						<img src={`http://openweathermap.org/img/wn/${icon}@2x.png`}></img>
-						<p>{description}</p>
+						<img className='image__img' src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt="Current weather icon"></img>
+						<p className='image__description'>{description}</p>
 					</li>
 					<li className='restParams'>
 						<span className='restParams__label'>Wind</span>

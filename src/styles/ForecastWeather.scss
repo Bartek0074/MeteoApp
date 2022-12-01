@@ -1,0 +1,37 @@
+.forecastWeatherBox {
+	display: flex;
+	flex-direction: column;
+	&__title {
+		margin: 0.5em 0;
+		font-size: 1.8rem;
+        text-transform: uppercase;
+	}
+	.forecastWeather {
+		&__list {
+			width: 100%;
+			overflow-x: scroll;
+			display: flex;
+			list-style: none;
+		}
+		&__weather{
+            &-params{
+                margin-top: 1em;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                list-style: none;
+                .param {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: .4em 1.5em;
+                    &__label {
+                        font-size: 1.5rem;
+                    }
+                    &__value {
+                        font-size: 1.5rem;
+                        font-weight: normal;
+                    }
+                }
+            }
+		}
+	}
+}

@@ -1,25 +1,30 @@
 import React, { useState } from 'react';
+import '../styles/ForecastWeather.scss'
 import ForecastElement from './ForecastElement';
 
 function ForecastWeather(props) {
 	const { forecast } = props;
 
 	const [active, setActive] = useState(0);
-	const handleClick = (id) => {
-		if (active !== id) setActive(id);
-		else setActive();
-	};
 
-	const description = forecast[active].weather[0].description;
 	const tempFelt = forecast[active].main.feels_like.toFixed(0);
+
 	let rain;
 	if (typeof forecast[active].rain !== 'undefined') rain = forecast[active].rain['3h'].toFixed(1)
+
 	let snow;
 	if (typeof forecast[active].snow !== 'undefined') snow = forecast[active].snow['3h'].toFixed(1)
+	
 	const wind = forecast[active].wind.speed.toFixed(1);
 	const pressure = forecast[active].main.pressure;
 	const humidity = forecast[active].main.humidity;
 	const cloudiness = forecast[active].clouds.all;
+	
+	const handleClick = (id) => {
+		if (active !== id) setActive(id);
+		else setActive();
+	};
+	
 	return (
 		<div className='forecastWeatherBox'>
 			<p className='forecastWeatherBox__title'>Weather forecast</p>
@@ -39,18 +44,18 @@ function ForecastWeather(props) {
 				</ul>
 				{active != null && (
 					<div className='forecastWeather__weather'>
-						<ul className='currentWeather__params'>
+						<ul className='forecastWeather__weather-params'>
 							<li className='param'>
 								<p className='param__label'>Temperature felt</p>
 								<p className='param__value'>{tempFelt}°C</p>
 							</li>
 							<li className='param'>
 								<p className='param__label'>Rain</p>
-								<p className='param__value'>{rain ? rain : '0.0'} mm/m²</p>
+								<p className='param__value'>{rain ? rain : '0.0'} mm</p>
 							</li>
 							<li className='param'>
 								<p className='param__label'>Snow</p>
-								<p className='param__value'>{snow ? snow : '0.0'} mm/m²</p>
+								<p className='param__value'>{snow ? snow : '0.0'} mm</p>
 							</li>
 							<li className='param'>
 								<p className='param__label'>Wind</p>
