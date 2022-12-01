@@ -21,8 +21,7 @@ function ForecastWeather(props) {
 	const cloudiness = forecast[active].clouds.all;
 	
 	const handleClick = (id) => {
-		if (active !== id) setActive(id);
-		else setActive();
+		 setActive(id);
 	};
 	
 	return (
