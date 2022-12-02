@@ -1,0 +1,38 @@
+.charTemp {
+    &__title {
+        margin: 0.5em 0;
+		font-size: 1.6rem;
+		text-transform: uppercase;
+    }
+	&__wrapper {
+		width: 100%;
+		height: 275px;
+		.charTemp__chartEl {
+			height: 100%;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.charTemp {
+        &__title {
+			font-size: 1.7rem;
+		}
+		&__wrapper {
+			width: 100%;
+			height: 350px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.charTemp {
+        &__title {
+			font-size: 1.8rem;
+		}
+		&__wrapper {
+			width: 100%;
+			height: 425px;
+		}
+	}
+}

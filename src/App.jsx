@@ -5,6 +5,7 @@ import Form from './components/Form';
 import ForecastWeather from './components/ForecastWeather';
 import { fetchWeather } from './utils/fetchWeather';
 import { fetchCity } from './utils/fetchCity';
+import ChartTemp from './components/ChartTemp';
 
 function App() {
 	const [city, setCity] = useState('Warsaw');
@@ -23,9 +24,8 @@ function App() {
 				setCountry(country[0].name.common);
 				setCity(data.city.name);
 				setForecast(data.list);
-			}
-			else {
-				setForecast([])
+			} else {
+				setForecast([]);
 			}
 		};
 		fetch();
@@ -42,6 +42,8 @@ function App() {
 			{forecast[0] && <CurrentWeather data={forecast[0]} />}
 			{forecast[0] && <hr className='separator'></hr>}
 			{forecast[0] && <ForecastWeather forecast={forecast} />}
+			{forecast[0] && <hr className='separator'></hr>}
+			{forecast[0] && <ChartTemp forecast={forecast} />}
 		</div>
 	);
 }
