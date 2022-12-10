@@ -4,7 +4,7 @@ This is simple react weather app.
 
 ## Demo
 
-Live Demo [here]().
+Live Demo [here](https://bartek0074-meteoapp.netlify.app/).
 
 ![meteoApp](https://user-images.githubusercontent.com/88652468/205315941-6106f23d-9cb4-4437-a1ce-7e95e903f16d.gif)
 
@@ -45,5 +45,5 @@ $ npm start # or yarn start
 - RWD,
 - SASS,
 - BEM,
-- Display API Data Using Axios with React.
-- Chart.js
+- Display API Data Using Axios with React,
+- Chart.js.
