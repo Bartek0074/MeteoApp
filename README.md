@@ -1,6 +1,6 @@
 # MeteoApp
 
-This is simple react weather app.
+This is a nice React Weather App, where you can find the current weather and weather forecast of your/others city. I was building this app using React.js and the help of [OpenWeather API](https://openweathermap.org/api).
 
 ## Demo
 
@@ -37,13 +37,14 @@ Run it
 $ npm start # or yarn start
 ```
 
-## Built with
+## Technologies
 
 - React.js,
 - React Hooks,
-- [React Icons](https://react-icons.github.io/react-icons/),
-- RWD,
+- JavaScript,
+- HTML,
 - SASS,
 - BEM,
+- RWD,
 - Display API Data Using Axios with React,
-- Chart.js.
+- Node packages.
