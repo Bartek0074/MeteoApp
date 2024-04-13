@@ -2,7 +2,7 @@
 
 This is a nice React Weather App, where you can find the current weather and weather forecast of your/others city. I was building this app using React.js and the help of [OpenWeather API](https://openweathermap.org/api).
 
-New version of the app witha upgrades, such as integration with Zustand, TypeScript and Google Places API is available, [link](https://github.com/Bartek0074/MeteoAppNew/) to new version.
+New version of the app with upgrades, such as integration with Zustand, TypeScript and Google Places API is available. [Link](https://github.com/Bartek0074/MeteoAppNew/) to new version.
 
 
 ## Demo
