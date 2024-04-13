@@ -2,6 +2,9 @@
 
 This is a nice React Weather App, where you can find the current weather and weather forecast of your/others city. I was building this app using React.js and the help of [OpenWeather API](https://openweathermap.org/api).
 
+New version of the app witha upgrades, such as integration with Zustand, TypeScript and Google Places API is available, [link](https://github.com/Bartek0074/MeteoAppNew/) to new version.
+
+
 ## Demo
 
 Live Demo [here](https://bartek0074-meteoapp.netlify.app/).
@@ -39,12 +42,19 @@ $ npm start # or yarn start
 
 ## Technologies
 
-- React.js,
-- React Hooks,
-- JavaScript,
-- HTML,
-- SASS,
-- BEM,
-- RWD,
-- Display API Data Using Axios with React,
-- Node packages.
+- React,
+- SCSS (BEM),
+- React Router.
+
+## APIs
+
+- [OpenWeather API](https://openweathermap.org/api),
+ 
+## Other packages
+
+- react-icons,
+- chart.js,
+- react-chartjs-2,
+- react-google-places-autocomplete.
+- axios.
+
